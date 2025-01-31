@@ -16,7 +16,8 @@ def fetch_air_quality_data(cities, pollutants=['pm25', 'pm10', 'o3', 'no2', 'co'
             date = start_date + timedelta(days=i)
             date_str = date.strftime('%Y-%m-%d')
             api_url = f"{base_url}/{city}/?token={api_token}&date={date_str}"
-            
+
+
 
             try:
                 response = requests.get(api_url)
